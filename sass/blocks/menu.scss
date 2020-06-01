@@ -1,0 +1,55 @@
+$text-color: #707070;
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.menu__element {
+    margin-right: 35px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.menu__link {
+    display: inline-block;
+    font-size: 12px;
+    font-family: 'Raleway';
+    color: $text-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1.667;
+    text-align: left;
+
+    &::before {
+        content: '';
+        width: 8px;
+        height: 2px;
+        background-color: $second;
+        display: block;
+        margin-bottom: 2px;
+        opacity: 0;
+        transition-duration: 500ms;
+        transition-property: opacity;
+    }
+
+    &:hover {
+        color: $second;
+        transition-duration: 500ms;
+        transition-property: color;
+
+        &::before {
+            opacity: 1;
+        }
+    }
+  }
+
+  @media (max-width: 768px) {
+      .menu__element {
+          margin-right: 20px;
+      }
+  }
+  
