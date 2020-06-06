@@ -1,8 +1,3 @@
-$bg: #202020;
-$lineColor: #2f2f2f;
-$worksText: #464646;
-$worksDescription: #959595;
-
 .works {
   background-color: $bg;
 }
@@ -59,7 +54,7 @@ $worksDescription: #959595;
 
 .works__text {
   font-size: 14px;
-  color: $worksText;
+  color: $pText;
   line-height: 1.429;
   margin: 20px 0;
 }
@@ -154,7 +149,7 @@ $worksDescription: #959595;
 
 .works__description {
   font-size: 12px;
-  color: $worksDescription;
+  color: $description;
   text-transform: uppercase;
   line-height: 1.667;
   margin: 20px 0;
