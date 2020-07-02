@@ -1,0 +1,63 @@
+.form {
+
+  label {
+    @include visually-hidden;
+  }
+
+}
+
+.form__input {
+  margin-bottom: 20px;
+
+  input, textarea {
+    border-radius: 10px;
+    background-color: $bg;
+    width: 100%;
+    display: block;
+    border: none;
+    box-shadow: none;
+    resize: none;
+    font-size: 20px;
+    font-family: 'Raleway';
+    color: $white;
+    line-height: 1.4;
+    padding: 16px 10px 16px 30px;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: $white;
+      opacity: 1;
+    }
+  }
+
+  textarea {
+    min-height: 200px;
+  }
+
+}
+
+.form__button {
+  border-radius: 10px;
+  background-color: $second;
+  color: $white;
+  font-size: 20px;
+  font-family: 'Raleway';
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.4;
+  width: 100%;
+  padding: 16px 0;
+  box-shadow: none;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  transition-duration: 500ms;
+  transition-property: background-color;
+
+  &:hover, &:active {
+    background-color: darken($second, $amount: 15%);
+  }
+}
+
+
+
