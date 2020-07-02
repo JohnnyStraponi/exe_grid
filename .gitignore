@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/OwlCarousel2
 
 # testing
 /coverage
