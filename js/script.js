@@ -41,7 +41,8 @@ window.addEventListener('DOMContentLoaded', () => {
   //Animation
 
   const progressLine = document.querySelectorAll('.progress__line'),
-    progressTooltip = document.querySelectorAll('.progress__tooltip');
+    progressTooltip = document.querySelectorAll('.progress__tooltip'),
+    skills = document.querySelector('.skills');
 
   function moveProgressBar() {
     progressLine.forEach(item => {
@@ -62,7 +63,15 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 1500);
   }
 
-  moveProgressBar();
+  function showProgressBar() {
+    if (skills.offsetTop <= window.pageYOffset + 400) {
+      moveProgressBar();
+      window.removeEventListener('scroll', showProgressBar);
+      console.log(window.pageYOffset);
+    }
+  }
+
+  window.addEventListener('scroll', showProgressBar);
 
   //Carousel
 
